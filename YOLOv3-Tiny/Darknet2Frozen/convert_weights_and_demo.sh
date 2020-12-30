@@ -1,5 +1,5 @@
 set -e
-CONDA_PATH="E:/ForInstallAnaconda/Scripts/anaconda.exe"
+CONDA_PATH=$(where anaconda)
 CONDA_SETTING_SCRIPT="${CONDA_PATH}/../../etc/profile.d/conda.sh"
 source "${CONDA_SETTING_SCRIPT}"
 conda activate deeplab
