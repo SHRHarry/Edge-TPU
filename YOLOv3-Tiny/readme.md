@@ -7,11 +7,11 @@
 2. Convert Tensorflow frozen graph ( `.pb` ) to TF-lite model ( `.tflite` ) .
 3. Compile a TF-Lite model ( `.tflite` ) into a file that's compatible with the Edge TPU ( `_edgetpu.tflite` ) .
 
-## Step1： 
+## Step1
 
-## Step2： 
+## Step2
 
-## Step3： 
+## Step3
 
 ## Reference
 1. [Convert YOLOv3-Tiny to tensorflow model](https://github.com/mystic123/tensorflow-yolo-v3)
