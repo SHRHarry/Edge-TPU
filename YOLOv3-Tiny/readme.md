@@ -2,13 +2,16 @@
 ## Introduction
 * This repository is the model conversion process of Edge-TPU Mini PCIe Accelerator.
 * In order to run the model on Edge-TPU, it must be converted to full quantized TensorFlow-Lite model.
-* The following are the model conversion steps.
+* The following are the model conversion steps, including:
+1. Convert Darknet model ( `.weights` ) to TensorFlow frozen graph ( `.pb` ) .
+2. Convert Tensorflow frozen graph ( `.pb` ) to TF-lite model ( `.tflite` ) .
+3. Compile a TF-Lite model ( `.tflite` ) into a file that's compatible with the Edge TPU ( `_edgetpu.tflite` ) .
 
-## Step1： Convert Darknet model ( `.weights` ) to TensorFlow frozen graph ( `.pb` ) .
+## Step1： 
 
-## Step2： Convert Tensorflow frozen graph ( `.pb` ) to TF-lite model ( `.tflite` ) .
+## Step2： 
 
-## Step3： Compile a TF-Lite model ( `.tflite` ) into a file that's compatible with the Edge TPU ( `_edgetpu.tflite` ) .
+## Step3： 
 
 ## Reference
 1. [Convert YOLOv3-Tiny to tensorflow model](https://github.com/mystic123/tensorflow-yolo-v3)
