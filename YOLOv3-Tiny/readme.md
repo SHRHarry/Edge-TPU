@@ -7,7 +7,7 @@ The following are the model conversion steps, including:
 2. Convert Tensorflow frozen graph `.pb` to TF-lite model `.tflite`.
 3. Compile a TF-Lite model `.tflite` into a file that's compatible with the Edge TPU `_edgetpu.tflite`.
 
-## Step1 ```Darknet2Frozen```
+## Step1 `Darknet2Frozen`
 
 ## Step2
 
