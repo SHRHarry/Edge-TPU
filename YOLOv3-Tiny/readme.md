@@ -9,7 +9,7 @@ The following are the model conversion steps, including:
 
 **P.S.** Since different versions of tensotflow will be used, it is recommended to use [Anaconda](https://www.anaconda.com/download/) to create environments of different versions.
 
-## Step1 `Darknet2Frozen`
+## Step1 Darknet2Frozen
 ### Setup
 Assuming a fresh Anaconda distribution with Python 3.6.12, you can install the dependencies with:
 ```
@@ -32,6 +32,15 @@ python demo_tiny_yolo_tf.py -m $OUTPUT_GRAPH -I $INPUT_IMAGE -O $OUTPUT_IMAGE --
 ```
 
 ## Step2 Frozen2tflite
+### Setup
+To inference with quantize TF-lite model, first of all, you need to install TensorFlow or TensorFlow-Lite with:
+```
+pip install tensorflow==2.2.0
+```
+Or 
+```
+pip install tflite-runtime==2.5.0
+```
 
 ## Step3 EdgeTPUCompiler
 
