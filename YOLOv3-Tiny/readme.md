@@ -9,7 +9,7 @@ The following are the model conversion steps, including:
 
 **P.S.** Since different versions of tensotflow will be used, it is recommended to use [Anaconda](https://www.anaconda.com/download/) to create environments of different versions.
 
-## Step1 Darknet2Frozen
+## Step1 **Darknet2Frozen**
 ### Setup
 Assuming a fresh Anaconda distribution with Python 3.6.12, you can install the dependencies with:
 ```
