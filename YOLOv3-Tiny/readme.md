@@ -42,6 +42,7 @@ Or
 ```
 pip install tflite-runtime==2.5.0
 ```
+**P.S.** In this step, you can also create another environment to convert the model.
 ### Convert
 Convert `.pb` to `.tflite` by using:
 ```
