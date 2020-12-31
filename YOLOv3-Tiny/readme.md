@@ -13,9 +13,9 @@ The following are the model conversion steps, including:
 ### Setup
 Assuming a fresh Anaconda distribution with Python 3.6.12, you can install the dependencies with:
 ```
+pip install numpy pillow
 pip install tensorflow==1.12.0
 pip install  opencv-python==4.1.2.30
-pip install numpy pillow 
 ```
 ### 
 
