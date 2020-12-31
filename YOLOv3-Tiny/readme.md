@@ -7,11 +7,19 @@ The following are the model conversion steps, including:
 2. Convert Tensorflow frozen graph `.pb` to TF-lite model `.tflite`.
 3. Compile a TF-Lite model `.tflite` into a file that's compatible with the Edge TPU `_edgetpu.tflite`.
 
-## Step1 `Darknet2Frozen`
+P.S.Since different versions of tensotflow will be used, it is recommended to use anaconda to create environments of different versions.
 
-## Step2
+## Step1 Darknet2Frozen
+### Setup
+Assuming a fresh [Anaconda](https://www.anaconda.com/download/) distribution with Python 3.6.12, you can install the dependencies with:
+```
+pip install tensorflow==1.12.0 opencv-python==4.1.2.30 numpy pillow 
+```
+### 
 
-## Step3
+## Step2 Frozen2tflite
+
+## Step3 EdgeTPUCompiler
 
 ## Reference
 1. [Convert YOLOv3-Tiny to tensorflow model](https://github.com/mystic123/tensorflow-yolo-v3)
