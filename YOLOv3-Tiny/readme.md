@@ -1,5 +1,5 @@
 # Edge-TPU YOLOv3-Tiny Convert & Run
-<img src="./image_438.jpg" width = "448" height = "251" alt="Demo1" align=center /><img src="./image_438_out1.png" width = "448" height = "251" alt="Demo2" align=center />
+<img src="./image_438.jpg" width = "512" height = "288" alt="Demo1" align=center /><img src="./image_438_out1.png" width = "512" height = "288" alt="Demo2" align=center />
 ## Introduction
 This repository is the model conversion process of Edge-TPU M.2 or Mini PCIe Accelerator.
 In order to run the model on Edge-TPU, it must be converted to full quantized TensorFlow-Lite model.
