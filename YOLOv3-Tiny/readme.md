@@ -17,7 +17,19 @@ pip install numpy pillow
 pip install tensorflow==1.12.0
 pip install  opencv-python==4.1.2.30
 ```
-### 
+### Convert
+Get information required for conversion with:
+```
+python generate_model_params.py -i $CFG -l $CLASS_NAME -o InputData/
+```
+Then convert `.weights` to `.pb` by using:
+```
+python convert_weights_pb.py --class_names $CLASS_NAME --weights_file $WEIGHTS_FILE --data_format NHWC --output_graph $OUTPUT_GRAPH --size $SIZE --tiny --model_config $CFG
+```
+If you want to check the result by using the conversion  model, you can use:
+```
+python demo_tiny_yolo_tf.py -m $OUTPUT_GRAPH -I $INPUT_IMAGE -O $OUTPUT_IMAGE --params $PARAMS -l $LABELS -pt 0.5 -iout 0.5
+```
 
 ## Step2 Frozen2tflite
 
