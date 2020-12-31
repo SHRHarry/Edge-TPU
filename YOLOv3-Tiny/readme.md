@@ -27,7 +27,7 @@ Then convert `.weights` to `.pb` by using:
 python convert_weights_pb.py --class_names $CLASS_NAME --weights_file $WEIGHTS_FILE --data_format NHWC --output_graph $OUTPUT_GRAPH --size $SIZE --tiny --model_config $CFG
 ```
 ### Demo
-If you want to check the result by using the conversion  model, you can use:
+If you want to check the result with the conversion model, you can use:
 ```
 python demo_tiny_yolo_tf.py -m $OUTPUT_GRAPH -I $INPUT_IMAGE -O $OUTPUT_IMAGE --params $PARAMS -l $LABELS -pt 0.5 -iout 0.5
 ```
