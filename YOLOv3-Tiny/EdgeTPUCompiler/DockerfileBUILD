@@ -1,0 +1,31 @@
+# Use ubuntu as the base image
+FROM ubuntu:18.04
+USER root
+ENV TZ=Asia/Taiwan
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# Add author's name
+LABEL maintainer="Harry Shen"
+
+RUN apt-get update && \
+    apt-get dist-upgrade -y && \
+    apt-get update && \
+    apt-get install -y curl \
+    sudo \
+    libcurl4-openssl-dev \
+    libboost-dev \
+    libboost-log-dev \
+    python3-pip \
+    git \
+    wget
+
+# Edge TPU Compiler install
+RUN apt-get install -y gnupg2 && \
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
+    echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list && \
+    apt-get update && \
+    apt-get install -y edgetpu-compiler
+
+WORKDIR /
+RUN mkdir EdgeTPUConverter
+RUN mkdir EdgeTPUConverter/InputModels
+COPY /InputModels /EdgeTPUConverter/InputModels

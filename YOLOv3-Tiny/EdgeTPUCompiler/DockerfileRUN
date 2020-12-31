@@ -1,0 +1,23 @@
+# Use ubuntu as the base image
+FROM edge_tpu_compiler:run
+
+# DeepLab
+RUN edgetpu_compiler -s /EdgeTPUConverter/InputModels/DeepLab/PASCAL/demo.tflite \
+                     -o /EdgeTPUConverter/InputModels/DeepLab/PASCAL/
+RUN edgetpu_compiler --num_segments=8 \
+                     -s /EdgeTPUConverter/InputModels/DeepLab/PASCAL/demo.tflite \
+                     -o /EdgeTPUConverter/InputModels/DeepLab/PASCAL/MultiTPU
+
+# EfficientNet
+RUN edgetpu_compiler -s /EdgeTPUConverter/InputModels/EffNet/ImageNet/efficientnet-edgetpu-S_quant.tflite \
+                     -o /EdgeTPUConverter/InputModels/EffNet/ImageNet
+RUN edgetpu_compiler --num_segments=8 \
+                     -s /EdgeTPUConverter/InputModels/EffNet/ImageNet/efficientnet-edgetpu-S_quant.tflite \
+                     -o /EdgeTPUConverter/InputModels/EffNet/ImageNet/MultiTPU
+
+# YOLOv3-tiny only can segment to 6
+RUN edgetpu_compiler -s /EdgeTPUConverter/InputModels/YOLO/COCO/coco-tiny-v3-relu_1225.tflite \
+                     -o /EdgeTPUConverter/InputModels/YOLO/COCO
+RUN edgetpu_compiler --num_segments=6 \
+                     -s /EdgeTPUConverter/InputModels/YOLO/COCO/coco-tiny-v3-relu_1225.tflite \
+                     -o /EdgeTPUConverter/InputModels/YOLO/COCO/MultiTPU
