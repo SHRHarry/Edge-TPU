@@ -70,6 +70,7 @@ docker build --no-cache -t edge_tpu_compiler:run -f DockerfileRUN .
 Then copy back all the result from container.
 
 ## Reference
+Those implementation is borrowed from:
 1. [Convert YOLOv3-Tiny to tensorflow model](https://github.com/mystic123/tensorflow-yolo-v3)
 2. [Compile and deploy YOLOv3-Tiny models for CoralDevBoard/TinkerEdgeT](https://github.com/KodeWorker/EdgeTPU-YOLOv3-Tiny)
 3. [Run Tiny YOLO-v3 on Google's Edge TPU USB Accelerator.](https://github.com/guichristmann/edge-tpu-tiny-yolo)
