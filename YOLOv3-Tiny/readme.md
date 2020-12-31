@@ -1,6 +1,6 @@
 # Edge-TPU YOLOv3-Tiny Convert & Run
 ## Introduction
-This repository is the model conversion process of Edge-TPU Mini PCIe Accelerator.
+This repository is the model conversion process of Edge-TPU M.2 or Mini PCIe Accelerator.
 In order to run the model on Edge-TPU, it must be converted to full quantized TensorFlow-Lite model.
 The following are the model conversion steps, including:
 1. Convert Darknet model `.weights` to TensorFlow frozen graph `.pb`.
