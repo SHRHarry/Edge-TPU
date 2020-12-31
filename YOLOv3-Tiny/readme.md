@@ -26,6 +26,7 @@ Then convert `.weights` to `.pb` by using:
 ```
 python convert_weights_pb.py --class_names $CLASS_NAME --weights_file $WEIGHTS_FILE --data_format NHWC --output_graph $OUTPUT_GRAPH --size $SIZE --tiny --model_config $CFG
 ```
+### Demo
 If you want to check the result by using the conversion  model, you can use:
 ```
 python demo_tiny_yolo_tf.py -m $OUTPUT_GRAPH -I $INPUT_IMAGE -O $OUTPUT_IMAGE --params $PARAMS -l $LABELS -pt 0.5 -iout 0.5
@@ -33,7 +34,7 @@ python demo_tiny_yolo_tf.py -m $OUTPUT_GRAPH -I $INPUT_IMAGE -O $OUTPUT_IMAGE --
 
 ## Step2 Frozen2tflite
 ### Setup
-To inference with quantize TF-lite model, first of all, you need to install TensorFlow or TensorFlow-Lite with:
+To inference with quantized TF-lite model, first of all, you need to install TensorFlow or TensorFlow-Lite with:
 ```
 pip install tensorflow==2.2.0
 ```
@@ -41,7 +42,21 @@ Or
 ```
 pip install tflite-runtime==2.5.0
 ```
-
+### Convert
+Convert `.pb` to `.tflite` by using:
+```
+python convert_frozen_model_to_tflite.py -m $PB_MODEL -o $TFLITE_MODEL --params $PARAMS
+```
+### Demo
+Check the result by using:
+```
+python demo_tiny_yolo_tflite.py -m $TFLITE_MODEL -I $INPUT_IMAGE --params $PARAMS -l $LABEL -pt 0.5 -iout 0.5 -O $OUTPUT_IMAGE
+```
+Or
+```
+python yolov3_tiny_tflite_demo.py --model $TFLITE_MODEL --anchors $ANCHOR --classes $NAMES -t 0.5 --quant --image $INPUT_IMAGE
+```
+**P.S.** `$PARAMS`, `--$LABEL` is the parameter from step1
 ## Step3 EdgeTPUCompiler
 
 ## Reference
