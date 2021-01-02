@@ -50,7 +50,7 @@ Convert `.pb` to `.tflite` by using:
 python convert_frozen_model_to_tflite.py -m $PB_MODEL -o $TFLITE_MODEL --params $PARAMS
 ```
 ### Demo
-Check the result by using:
+Check the result with:
 ```
 python demo_tiny_yolo_tflite.py -m $TFLITE_MODEL -I $INPUT_IMAGE --params $PARAMS -l $LABEL -pt 0.5 -iout 0.5 -O $OUTPUT_IMAGE
 ```
@@ -62,7 +62,7 @@ python yolov3_tiny_tflite_demo.py --model $TFLITE_MODEL --anchors $ANCHOR --clas
 ## Step3 EdgeTPUCompiler
 In this step, we provided two [Docker](https://www.docker.com/) images to build the `edgetpu_compiler` environment and compile `.tflite` into `_edgetpu.tflite`.
 You can just run `run_docker_TPUCompiler.cmd` to do those things.
-Or you can use `dockerfileBUILD` and `dockerfileRUN` to build the environment and compile model step by step, by using:
+Or you can use `dockerfileBUILD` and `dockerfileRUN` to build the environment and compile model step by step, using:
 ```
 docker build --no-cache -t edge_tpu_compiler:build -f DockerfileBUILD .
 docker build --no-cache -t edge_tpu_compiler:run -f DockerfileRUN .
