@@ -60,7 +60,7 @@ python yolov3_tiny_tflite_demo.py --model $TFLITE_MODEL --anchors $ANCHOR --clas
 ```
 **Note:** `$PARAMS` `$LABEL` is the parameter from step1
 ## Step3 EdgeTPUCompiler
-In this step, we provided two [Docker](https://www.docker.com/) images to build the `edgetpu_compiler` environment and compile `.tflite` into `_edgetpu.tflite`.
+In this step, we provided two [Docker](https://www.docker.com/) images to build the `edgetpu_compiler` environment and compile `.tflite` into `_edgetpu.tflite` in the container.
 You can just run `run_docker_TPUCompiler.cmd` to do those things.
 Or you can use `dockerfileBUILD` and `dockerfileRUN` to build the environment and compile model step by step, using:
 ```
