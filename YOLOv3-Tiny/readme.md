@@ -8,7 +8,7 @@ The following are the model conversion steps, including:
 2. Convert Tensorflow frozen graph `.pb` to TF-lite model `.tflite`.
 3. Compile a TF-Lite model `.tflite` into a file that's compatible with the Edge TPU `_edgetpu.tflite`.
 
-**P.S.** Since different versions of tensotflow will be used, it is recommended to use [Anaconda](https://www.anaconda.com/download/) to create environments of different versions.
+**Note:** Since different versions of tensotflow will be used, it is recommended to use [Anaconda](https://www.anaconda.com/download/) to create environments of different versions.
 
 ## Step1 Darknet2Frozen
 ### Setup
@@ -43,7 +43,7 @@ Or
 ```
 pip install tflite-runtime==2.5.0
 ```
-**P.S.** In this step, you can also create another environment to convert the model.
+**Note:** In this step, you can also create another environment to convert the model.
 ### Convert
 Convert `.pb` to `.tflite` by using:
 ```
@@ -58,7 +58,7 @@ Or
 ```
 python yolov3_tiny_tflite_demo.py --model $TFLITE_MODEL --anchors $ANCHOR --classes $NAMES -t 0.5 --quant --image $INPUT_IMAGE
 ```
-**P.S.** `$PARAMS` `--$LABEL` is the parameter from step1
+**Note:** `$PARAMS` `--$LABEL` is the parameter from step1
 ## Step3 EdgeTPUCompiler
 In this step, we provided two [Docker](https://www.docker.com/) images to build the `edgetpu_compiler` environment and compile `.tflite` into `_edgetpu.tflite`.
 You can just run `run_docker_TPUCompiler.cmd` to do those things.
