@@ -12,7 +12,7 @@ The following are the model conversion steps, including:
 
 ## Step1 Darknet2Frozen
 ### Setup
-Assuming a fresh Anaconda distribution with Python 3.6.12, you can install the dependencies with:
+Assuming a fresh Anaconda distribution with Python 3.6, you can install the dependencies with:
 ```
 pip install numpy pillow
 pip install tensorflow==1.12.0
@@ -58,7 +58,7 @@ Or
 ```
 python yolov3_tiny_tflite_demo.py --model $TFLITE_MODEL --anchors $ANCHOR --classes $NAMES -t 0.5 --quant --image $INPUT_IMAGE
 ```
-**Note:** `$PARAMS` `--$LABEL` is the parameter from step1
+**Note:** `$PARAMS` `$LABEL` is the parameter from step1
 ## Step3 EdgeTPUCompiler
 In this step, we provided two [Docker](https://www.docker.com/) images to build the `edgetpu_compiler` environment and compile `.tflite` into `_edgetpu.tflite`.
 You can just run `run_docker_TPUCompiler.cmd` to do those things.
