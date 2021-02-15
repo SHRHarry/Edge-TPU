@@ -35,13 +35,17 @@ python demo_tiny_yolo_tf.py -m $OUTPUT_GRAPH -I $INPUT_IMAGE -O $OUTPUT_IMAGE --
 
 ## Step2 Frozen2tflite
 ### Setup
-To inference with quantized TF-lite model, first of all, you need to install TensorFlow or TensorFlow-Lite with:
+To inference with quantized TF-lite model, first of all, you need to install TensorFlow or TensorFlow-Lite or PyCoral with:
 ```
 pip install tensorflow-gpu==2.2.0
 ```
 Or 
 ```
 pip install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime
+```
+Or
+```
+pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral
 ```
 **Note:** In this step, you can also create another environment to convert the model.
 ### Convert
